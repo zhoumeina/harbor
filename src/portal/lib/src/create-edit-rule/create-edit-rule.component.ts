@@ -52,6 +52,7 @@ export class CreateEditRuleComponent implements OnInit, OnDestroy {
     EVENT_BASED: "event_based"
   };
 
+
   ruleNameTooltip = "REPLICATION.NAME_TOOLTIP";
   headerTitle = "REPLICATION.ADD_POLICY";
 
