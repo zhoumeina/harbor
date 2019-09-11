@@ -20,6 +20,11 @@ matrix:
   - go: 1.12.5
     env:
     - OFFLINE=true
+
+language: node_js
+node_js:
+- 10.16.2
+
 env:
   global:
   - POSTGRESQL_HOST: localhost
