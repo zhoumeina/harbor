@@ -5,3 +5,5 @@ npm install -q --no-progress
 npm run build_lib && npm run link_lib && cd ../..
 
 cd ./src/portal && npm run lint && npm run lint:lib && npm run test && cd -
+pwd
+cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
