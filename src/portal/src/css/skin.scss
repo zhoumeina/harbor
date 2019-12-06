@@ -4,12 +4,11 @@
 clr-vertical-nav {
    background: #191a23 !important;
    box-shadow: 2px 0 6px rgba(0,21,41,.35);
-
 }
 
 .clr-vertical-nav .nav-link {
     color: hsla(0,0%,100%,.7) ;
-     margin: 5px 5px;
+    margin: 5px 5px;
  }
 
 .clr-vertical-nav .nav-link.active {
@@ -17,6 +16,10 @@ clr-vertical-nav {
     background-color:  #2d8cf0;
     border-radius: 5px;
     margin: 0 5px;
+}
+
+.clr-vertical-nav .nav-link {
+    border-radius: 5px;
 }
 
 .clr-vertical-nav .nav-link.active .nav-icon {
@@ -81,4 +84,8 @@ input[type=radio]:checked+label::before {
 
 input[type=checkbox]:checked+label::before {
     background: #2d8cf0 !important;
+}
+
+button:focus {
+  outline: none;
 }
