@@ -12,7 +12,7 @@
             <div class="image-summary col-md-4 col-sm-6">
                 <div class="flex-block">
                     <section class="image-detail-label">
-                        <section class="detail-row">
+                        <section class="detail-row mt-0">
                             <label class="detail-label">{{'TAG.AUTHOR' | translate }}</label>
                             <div class="image-details" [title]="author | translate">{{author | translate}}</div>
                         </section>
@@ -32,7 +32,7 @@
                             <label class="detail-label">{{'TAG.DOCKER_VERSION' | translate }}</label>
                             <div class="image-details" [title]="tagDetails.docker_version">{{tagDetails.docker_version}}</div>
                         </section>
-                        <section class="detail-row" *ngIf="hasCve">
+                        <section class="detail-row mb-0" *ngIf="hasCve">
                             <label class="detail-label">{{'TAG.SCAN_COMPLETION_TIME' | translate }}</label>
                             <div class="image-details" [title]="scanCompletedDatetime | date">{{scanCompletedDatetime | date}}</div>
                         </section>
@@ -43,7 +43,7 @@
                 <div class="vulnerability" [hidden]="hasCve || showStatBar">
                     <hbr-vulnerability-bar [repoName]="repositoryId" [tagId]="tagDetails.name" [summary]="vulnerabilitySummary"></hbr-vulnerability-bar>
                 </div>
-                <histogram-chart *ngIf="hasCve" [metadata]="passMetadataToChart()" [isWhiteBackground]="true"></histogram-chart>
+                <histogram-chart id="tag-detail-canvas" *ngIf="hasCve" [metadata]="passMetadataToChart()" [isWhiteBackground]="true"></histogram-chart>
             </div>
             <div *ngIf="!withAdmiral && tagDetails?.labels?.length">
                 <div class="third-column detail-title">{{'TAG.LABELS' | translate }}</div>
